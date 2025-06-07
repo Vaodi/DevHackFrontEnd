@@ -123,7 +123,7 @@ export default function SignUp(props) {
     };
 
     try {
-      const response = await axios.post('http://localhost:2000/signup', signupData);
+      const response = await axios.post('https://devhack.onrender.com/signup', signupData);
       console.log('Signup successful:', response.data);
       // Redirect to signin page after successful signup
       navigate('/signin');

@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('http://localhost:2000/me');
+      const response = await axios.get('https://devhack.onrender.com/me');
       setUser(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);

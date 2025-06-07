@@ -38,7 +38,7 @@ export default function Dashboard(props) {
       }
 
       // Set the Authorization header for this request
-      const response = await axios.get('http://localhost:2000/me', {
+      const response = await axios.get('https://devhack.onrender.com/me', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
