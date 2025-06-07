@@ -73,13 +73,8 @@ export default function Dashboard(props) {
             }}
           >
             <Header />
-            <MainGrid />
+            <MainGrid userData={userData} />
             {error && <div style={{ color: 'red' }}>{error}</div>}
-            {userData && (
-              <div>
-                <pre>{JSON.stringify(userData, null, 2)}</pre>
-              </div>
-            )}
           </Stack>
         </Box>
       </Box>
