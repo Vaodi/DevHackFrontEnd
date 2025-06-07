@@ -29,21 +29,38 @@ export default function Dashboard(props) {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
 
-  const fetchUserData = async (email) => {
+  const fetchUserData = async () => {
     try {
-      console.log('Fetching data for email:', email);
-      const response = await axios.get(`http://localhost:2000/users/${email}`);
+      const token = localStorage.getItem('authToken');
+      if (!token) {
+        setError('No authentication token found');
+        return;
+      }
+
+      // Set the Authorization header for this request
+      const response = await axios.get('http://localhost:2000/me', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      
       console.log('Response data:', response.data);
       setUserData(response.data);
       setError(null);
     } catch (err) {
       console.error('Error fetching user data:', err);
-      setError(err.message);
+      if (err.response?.status === 401 || err.response?.status === 403) {
+        // Token is invalid or expired
+        localStorage.removeItem('authToken');
+        window.location.href = '/signin';
+      } else {
+        setError(err.response?.data?.error || 'Error fetching user data');
+      }
     }
   };
 
   useEffect(() => {
-    fetchUserData('mesnosa95@gmail.com');
+    fetchUserData();
   }, []);
 
   return (
