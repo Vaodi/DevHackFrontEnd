@@ -7,30 +7,33 @@ import { useNavigate } from 'react-router-dom';
 
 const features = [
   {
-    title: "Feature 1: Smart Analytics",
-    description: "Our advanced analytics system provides real-time insights",
+    title: "Feature 1: Email-to-Structure Automation",
+    description: "Forward emails with PDF attachments and plain-text instructions — our AI handles the rest.",
     points: [
-      "Real-time data processing",
-      "Customizable dashboards",
-      "Automated reporting",
+      "Send simple instructions like: “Merge doc A and C, and place them in a Financial folder along with doc D.”",
+      "Get a download link to a structured ZIP file within minutes",
+      "No instructions? The AI intelligently merges and organizes what makes sense",
     ]
   },
   {
-    title: "Feature 2: Intelligent Automation",
-    description: "Automate your workflow with our smart tools",
+    title: "Feature 2: Smart Client Onboarding",
+    description: "Send a welcome email — our system takes care of the rest.",
     points: [
-      "Workflow automation",
-      "Scheduled tasks",
-      "Smart notifications"
+      "Automatically detects new clients from welcome emails",
+      "Creates client profiles in the CRM with no manual input",
+      "Extracts document lists and their specific compliance requirements",
+      "CC this 38e6ec0f2f500f1c2d8734325aafb487@inbound.postmarkapp.com when creating new client and make sure to ask for documents and requirements"
     ]
   },
   {
-    title: "Feature 3: Secure Integration",
-    description: "Seamlessly integrate with your existing systems",
+    title: "Feature 3: Automated Compliance Review",
+    description: "Send documents and get instant, detailed feedback.",
     points: [
-      "API integration",
-      "Data encryption",
-      "Role-based access control"
+      "Automatically identifies the client from forwarded documents",
+      "Reviews files for completeness and accuracy",
+      "Updates document status in the database",
+      "Sends a detailed compliance report via email, highlighting missing or non-compliant items",
+      "Forward/send to 38e6ec0f2f500f1c2d8734325aafb487@inbound.postmarkapp.com the documents and specify in the body your client email."
     ]
   }
 ];
