@@ -145,7 +145,13 @@ export default function SignIn(props) {
       <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
       <SignInContainer direction="column" justifyContent="space-between">
         <Card variant="outlined">
-          <SitemarkIcon />
+        <Typography
+            component="h4"
+            variant="h4"
+            sx={{ width: '100%', fontSize: 'clamp(1.5rem, 5vw, 1.15rem)', textAlign: 'center' }}
+          >
+            ComplyCat
+          </Typography>
           <Typography
             component="h1"
             variant="h4"
@@ -207,7 +213,7 @@ export default function SignIn(props) {
             >
               Sign in
             </Button>
-            <Link
+           {/*  <Link
               component="button"
               type="button"
               onClick={handleClickOpen}
@@ -215,9 +221,9 @@ export default function SignIn(props) {
               sx={{ alignSelf: 'center' }}
             >
               Forgot your password?
-            </Link>
+            </Link> */}
           </Box>
-          <Divider>
+         {/*  <Divider>
             <Typography sx={{ color: 'text.secondary' }}>or</Typography>
           </Divider>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -246,8 +252,8 @@ export default function SignIn(props) {
               >
                 Sign up
               </Link>
-            </Typography>
-          </Box>
+            </Typography> 
+          </Box> */}
         </Card>
       </SignInContainer>
     </AppTheme>

@@ -139,7 +139,13 @@ export default function SignUp(props) {
       <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
       <SignUpContainer direction="column" justifyContent="space-between">
         <Card variant="outlined">
-          <SitemarkIcon />
+        <Typography
+            component="h4"
+            variant="h4"
+            sx={{ width: '100%', fontSize: 'clamp(1.5rem, 5vw, 1.15rem)', textAlign: 'center' }}
+          >
+            ComplyCat
+          </Typography>
           <Typography
             component="h1"
             variant="h4"
@@ -202,10 +208,10 @@ export default function SignUp(props) {
                 color={passwordError ? 'error' : 'primary'}
               />
             </FormControl>
-            <FormControlLabel
+         {/*    <FormControlLabel
               control={<Checkbox value="allowExtraEmails" color="primary" />}
               label="I want to receive updates via email."
-            />
+            /> */}
             <Button
               type="submit"
               fullWidth
@@ -215,7 +221,7 @@ export default function SignUp(props) {
               Sign up
             </Button>
           </Box>
-          <Divider>
+         {/*  <Divider>
             <Typography sx={{ color: 'text.secondary' }}>or</Typography>
           </Divider>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -245,8 +251,8 @@ export default function SignUp(props) {
                 Sign in
               </Link>
             </Typography>
-          </Box>
-        </Card>
+          </Box> */}
+        </Card> 
       </SignUpContainer>
     </AppTheme>
   );
