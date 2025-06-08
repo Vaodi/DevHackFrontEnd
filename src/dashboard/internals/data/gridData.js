@@ -48,7 +48,7 @@ function renderSparklineCell(params) {
 
 function renderStatus(status) {
   const colors = {
-    Online: 'success',
+    Active: 'success',
     Offline: 'default',
   };
 
@@ -75,7 +75,7 @@ export function renderAvatar(params) {
 }
 
 export const columns = [
-  { field: 'pageTitle', headerName: 'Page Title', flex: 1.5, minWidth: 200 },
+  { field: 'pageTitle', headerName: 'Client Name', flex: 1.5, minWidth: 200 },
   {
     field: 'status',
     headerName: 'Status',
@@ -83,52 +83,25 @@ export const columns = [
     minWidth: 80,
     renderCell: (params) => renderStatus(params.value),
   },
-  {
-    field: 'users',
-    headerName: 'Users',
-    headerAlign: 'right',
-    align: 'right',
-    flex: 1,
-    minWidth: 80,
-  },
+
   {
     field: 'eventCount',
-    headerName: 'Event Count',
+    headerName: 'Invalid Documents',
     headerAlign: 'right',
-    align: 'right',
+    align: 'center',
     flex: 1,
     minWidth: 100,
   },
-  {
-    field: 'viewsPerUser',
-    headerName: 'Views per User',
-    headerAlign: 'right',
-    align: 'right',
-    flex: 1,
-    minWidth: 120,
-  },
-  {
-    field: 'averageTime',
-    headerName: 'Average Time',
-    headerAlign: 'right',
-    align: 'right',
-    flex: 1,
-    minWidth: 100,
-  },
-  {
-    field: 'conversions',
-    headerName: 'Daily Conversions',
-    flex: 1,
-    minWidth: 150,
-    renderCell: renderSparklineCell,
-  },
+
+
+
 ];
 
 export const rows = [
   {
     id: 1,
     pageTitle: 'Homepage Overview',
-    status: 'Online',
+    status: 'Active',
     eventCount: 8345,
     users: 212423,
     viewsPerUser: 18.5,
@@ -171,7 +144,7 @@ export const rows = [
   {
     id: 4,
     pageTitle: 'User Profile Dashboard',
-    status: 'Online',
+    status: 'Active',
     eventCount: 112543,
     users: 96240,
     viewsPerUser: 4.5,

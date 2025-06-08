@@ -52,8 +52,8 @@ export default function CustomizedDataGrid({ userData }) {
       (user.clients || []).map((client, clientIndex) => ({
         id: `${user.id}-${clientIndex}`,
         pageTitle: client.name || 'No Client Name',
-        status: 'Online',
-        eventCount: client.documents?.length || 0,
+        status: 'Active',
+        eventCount: client.documents?.filter(doc => !doc.valid)?.length || 0,
         users: client.documents?.filter(doc => doc.valid)?.length || 0,
         viewsPerUser: client.documents?.filter(doc => !doc.valid)?.length || 0,
         averageTime: client.email || 'No Email',

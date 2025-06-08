@@ -38,7 +38,7 @@ export default function SelectContent() {
       labelId="company-select"
       id="company-simple-select"
       value={company}
-      onChange={handleChange}
+      disabled
       displayEmpty
       inputProps={{ 'aria-label': 'Select company' }}
       fullWidth
@@ -58,12 +58,12 @@ export default function SelectContent() {
     >
       <ListSubheader sx={{ pt: 0 }}>Production</ListSubheader>
       <MenuItem value="">
-        <ListItemAvatar>
+      
           <Avatar alt="Sitemark web">
             <DevicesRoundedIcon sx={{ fontSize: '1rem' }} />
           </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Sitemark-web" secondary="Web app" />
+       
+        <ListItemText primary="ComplyCat" secondary="Compliance made easy" />
       </MenuItem>
       <MenuItem value={10}>
         <ListItemAvatar>

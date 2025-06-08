@@ -5,6 +5,7 @@ import ClientDetails from './dashboard/components/ClientDetails';
 import SignIn from './signin/SignIn';
 import SignUp from './signup/SignUp';
 import { AuthProvider } from './context/AuthContext';
+import HowItWorks from './how-it-works/HowItWorks';
 import './App.css';
 
 // Protected Route component
@@ -38,6 +39,10 @@ function AppRoutes() {
             <ClientDetails />
           </ProtectedRoute>
         }
+      />
+      <Route
+        path="/how-it-works"
+        element={<HowItWorks />}
       />
     </Routes>
   );

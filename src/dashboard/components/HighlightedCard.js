@@ -7,10 +7,16 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import InsightsRoundedIcon from '@mui/icons-material/InsightsRounded';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 export default function HighlightedCard() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/how-it-works');
+  };
 
   return (
     <Card sx={{ height: '100%' }}>
@@ -22,10 +28,10 @@ export default function HighlightedCard() {
           gutterBottom
           sx={{ fontWeight: '600' }}
         >
-          Explore your data
+          How it works ?
         </Typography>
         <Typography sx={{ color: 'text.secondary', mb: '8px' }}>
-          Uncover performance and visitor insights with our data wizardry.
+          Click to get a quick look at how it works
         </Typography>
         <Button
           variant="contained"
@@ -33,8 +39,9 @@ export default function HighlightedCard() {
           color="primary"
           endIcon={<ChevronRightRoundedIcon />}
           fullWidth={isSmallScreen}
+          onClick={handleClick}
         >
-          Get insights
+          Get Started
         </Button>
       </CardContent>
     </Card>
