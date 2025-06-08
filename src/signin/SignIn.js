@@ -254,6 +254,17 @@ export default function SignIn(props) {
               </Link>
             </Typography> 
           </Box> */}
+          <Typography sx={{ textAlign: 'center' }}>
+              Don&apos;t have an account?{' '}
+              <Link
+                component="button"
+                onClick={() => navigate('/signup')}
+                variant="body2"
+                sx={{ cursor: 'pointer' }}
+              >
+                Sign up
+              </Link>
+            </Typography>
         </Card>
       </SignInContainer>
     </AppTheme>
